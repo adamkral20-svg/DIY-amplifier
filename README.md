@@ -1,7 +1,9 @@
 # DIY-amplifier
 Custom class-d amplifier board.
+I made this since i previously tested a smaller version and i love loud music.
+
 <img width="826" height="507" alt="image" src="https://github.com/user-attachments/assets/ca5e5287-91af-435e-ae54-7447ffe52d2d" />
-This board is a Class - D audio amplifier with analog input and gain setting.
+This board is a Class - D audio amplifier with analog input(3.5mm audio jack) and gain setting.
 It can work with 4-16 ohm speaker on output, and supply voltage < 35V. has OCP latch and a glass fuse.
 
 It uses 4 MOSFETS in an H-bridge configuration, allowing for BTL output and thus higher power from lower supply voltage. 
