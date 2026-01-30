@@ -10,7 +10,7 @@ It uses 4 MOSFETS in an H-bridge configuration, allowing for BTL output and thus
 The main part is the HIP-4081A H-bridge MOSFET gate driver. It can reliably drive the MOSFETS in the hundreds of kHz switching speed.
 <img width="738" height="597" alt="image" src="https://github.com/user-attachments/assets/1b2c1b05-e141-46f2-bb19-3a5b730195d1" />
 
-The onboard discrete oscillator should be around 200kHz. The design for the oscillator came from SineLab, and i improved some parts to fit my design.
+The onboard discrete oscillator should be around 200kHz.
 It uses a pnp constant current source connected to a capacitor, and a MOSFET to discharge the capacitor quickly to generate a Ramp wave.
 The MOSFET has 0.7nC gate charge, so the TLV3501 can reliably drive it with its output current capability. 
 <img width="831" height="641" alt="image" src="https://github.com/user-attachments/assets/958903a5-3f3a-4cb5-9044-689871ce6399" />
@@ -28,3 +28,24 @@ To keep voltage levels for the audio and ramp wave similar, I'm using a 2V DC bi
 The logic circuits are powered by 7812 and 7805 repectively. 
 I used many caps between VCC and GND to keep noise low from the H-bridge
 <img width="1416" height="710" alt="image" src="https://github.com/user-attachments/assets/062382a5-9566-4680-87fd-dc36c8946cd1" />
+
+# PCB layers
+It uses 4 layers, since wiring it up with 2 layers, and still handling enough current was impossible, so i changed it to 4 to fit into < 100mm x 100mm size and handle ~5A on the output.
+
+# Layer 1(Vcc)
+<img width="1099" height="839" alt="image" src="https://github.com/user-attachments/assets/271678b6-5da3-4b28-8f70-8a322c584503" />
+
+# Layer 2(5V)
+<img width="1068" height="842" alt="image" src="https://github.com/user-attachments/assets/3f922205-189c-49d5-a54f-cb17178d9d3b" />
+
+# Layer 3(12V)
+<img width="1060" height="836" alt="image" src="https://github.com/user-attachments/assets/4b61b87a-8383-485c-9330-a19aa919b965" />
+
+# Layer 4(GND)
+<img width="1063" height="838" alt="image" src="https://github.com/user-attachments/assets/fc9e5238-0831-4797-a6ae-0a4dbd063ca0" />
+
+# Credits
+
+- [KiCad](https://www.kicad.org/)
+- [Fusion 360](https://www.autodesk.com/products/fusion-360/overview)
+- [Blueprint project](https://blueprint.hackclub.com/projects/10381)
