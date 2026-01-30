@@ -1,6 +1,7 @@
 # DIY-amplifier
 Custom class-d amplifier board.
 I made this since i previously tested a smaller version and i love loud music.
+The project uses an oscillator design based on the schematic of [SineLab](https://www.youtube.com/@SineLab). I did change a few things to fit my design better.
 
 <img width="826" height="507" alt="image" src="https://github.com/user-attachments/assets/ca5e5287-91af-435e-ae54-7447ffe52d2d" />
 This board is a Class - D audio amplifier with analog input(3.5mm audio jack) and gain setting.
@@ -14,6 +15,10 @@ The onboard discrete oscillator should be around 200kHz.
 It uses a pnp constant current source connected to a capacitor, and a MOSFET to discharge the capacitor quickly to generate a Ramp wave.
 The MOSFET has 0.7nC gate charge, so the TLV3501 can reliably drive it with its output current capability. 
 <img width="831" height="641" alt="image" src="https://github.com/user-attachments/assets/958903a5-3f3a-4cb5-9044-689871ce6399" />
+
+The design by Sine lab
+<img width="1246" height="460" alt="image" src="https://github.com/user-attachments/assets/37b82720-c3c7-4cea-a0e3-c877bf217521" />
+
 
 The overcurrent protection shuts off all MOSFETS when triggered, and keeps them off until the button is pressed. 
 It uses an npn-pnp SCR based design to output a constant signal with a single pulse.
